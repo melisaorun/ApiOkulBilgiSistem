@@ -12,7 +12,7 @@ namespace MvcOkulBilgiSistem
 
         static GlobalVariables()
         {
-            webapiclient.BaseAddress = new Uri("https://localhost:44395/api/");
+            webapiclient.BaseAddress = new Uri("https://localhost:44395/api/"); 
             webapiclient.DefaultRequestHeaders.Clear();
             webapiclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         }
