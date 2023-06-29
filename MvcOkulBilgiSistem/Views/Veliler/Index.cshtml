@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MvcOkulBilgiSistem.Models.VelilerModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<p>
+    <a href="@Url.Action("EY","Veliler")" class="btn btn-danger"><i class="fa-plus-square"></i>Veli Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VeliAdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciAdSoyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yakinlik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EgitimDurumu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VeliAdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciAdSoyadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yakinlik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EgitimDurumu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "EY", new { id = item.VeliNo }, new { @class = "btn btn-danger" }) |
+
+            @Html.ActionLink("Sil", "Sil", new { id = item.VeliNo }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>

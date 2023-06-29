@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OkulBilgiSistemiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Odevler">
+          <Key>
+            <PropertyRef Name="OdevNo" />
+          </Key>
+          <Property Name="OdevNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OgrenciAdiSoyadi" Type="nvarchar(max)" />
+          <Property Name="Ders" Type="varchar" MaxLength="50" />
+          <Property Name="VerilisTarihi" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeslimTarihi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notu" Type="int" />
+          <Property Name="Konu" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Ogrenciler">
+          <Key>
+            <PropertyRef Name="OgrenciNo" />
+          </Key>
+          <Property Name="OgrenciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OgrenciAdSoyad" Type="nvarchar(max)" />
+          <Property Name="Sinifi" Type="varchar" MaxLength="50" />
+          <Property Name="Bolumu" Type="varchar" MaxLength="50" />
+          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Veliler">
+          <Key>
+            <PropertyRef Name="VeliNo" />
+          </Key>
+          <Property Name="VeliNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VeliAdSoyad" Type="nvarchar(max)" />
+          <Property Name="OgrenciAdSoyadi" Type="nvarchar(max)" />
+          <Property Name="Yakinlik" Type="varchar" MaxLength="50" />
+          <Property Name="EgitimDurumu" Type="varchar" MaxLength="50" />
+          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="OkulBilgiSistemiModelStoreContainer">
+          <EntitySet Name="Odevler" EntityType="Self.Odevler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ogrenciler" EntityType="Self.Ogrenciler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Veliler" EntityType="Self.Veliler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OkulBilgiSistemiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Odevler">
+          <Key>
+            <PropertyRef Name="OdevNo" />
+          </Key>
+          <Property Name="OdevNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OgrenciAdiSoyadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ders" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VerilisTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TeslimTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notu" Type="Int32" />
+          <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Ogrenciler">
+          <Key>
+            <PropertyRef Name="OgrenciNo" />
+          </Key>
+          <Property Name="OgrenciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OgrenciAdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sinifi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bolumu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Veliler">
+          <Key>
+            <PropertyRef Name="VeliNo" />
+          </Key>
+          <Property Name="VeliNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VeliAdSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OgrenciAdSoyadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yakinlik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EgitimDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="OkulBilgiSistemiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Odevlers" EntityType="Self.Odevler" />
+          <EntitySet Name="Ogrencilers" EntityType="Self.Ogrenciler" />
+          <EntitySet Name="Velilers" EntityType="Self.Veliler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OkulBilgiSistemiModelStoreContainer" CdmEntityContainer="OkulBilgiSistemiEntities">
+          <EntitySetMapping Name="Odevlers">
+            <EntityTypeMapping TypeName="OkulBilgiSistemiModel.Odevler">
+              <MappingFragment StoreEntitySet="Odevler">
+                <ScalarProperty Name="OdevNo" ColumnName="OdevNo" />
+                <ScalarProperty Name="OgrenciAdiSoyadi" ColumnName="OgrenciAdiSoyadi" />
+                <ScalarProperty Name="Ders" ColumnName="Ders" />
+                <ScalarProperty Name="VerilisTarihi" ColumnName="VerilisTarihi" />
+                <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+                <ScalarProperty Name="Notu" ColumnName="Notu" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ogrencilers">
+            <EntityTypeMapping TypeName="OkulBilgiSistemiModel.Ogrenciler">
+              <MappingFragment StoreEntitySet="Ogrenciler">
+                <ScalarProperty Name="OgrenciNo" ColumnName="OgrenciNo" />
+                <ScalarProperty Name="OgrenciAdSoyad" ColumnName="OgrenciAdSoyad" />
+                <ScalarProperty Name="Sinifi" ColumnName="Sinifi" />
+                <ScalarProperty Name="Bolumu" ColumnName="Bolumu" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Velilers">
+            <EntityTypeMapping TypeName="OkulBilgiSistemiModel.Veliler">
+              <MappingFragment StoreEntitySet="Veliler">
+                <ScalarProperty Name="VeliNo" ColumnName="VeliNo" />
+                <ScalarProperty Name="VeliAdSoyad" ColumnName="VeliAdSoyad" />
+                <ScalarProperty Name="OgrenciAdSoyadi" ColumnName="OgrenciAdSoyadi" />
+                <ScalarProperty Name="Yakinlik" ColumnName="Yakinlik" />
+                <ScalarProperty Name="EgitimDurumu" ColumnName="EgitimDurumu" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

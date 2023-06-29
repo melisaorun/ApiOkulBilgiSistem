@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiOkulBilgiSistem", "ApiOkulBilgiSistem\ApiOkulBilgiSistem.csproj", "{7E884D34-B52E-4B76-9B46-D04EEBE6CC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcOkulBilgiSistem", "MvcOkulBilgiSistem\MvcOkulBilgiSistem.csproj", "{E00F4D74-1414-4D2F-89FA-8E3728DABAD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E884D34-B52E-4B76-9B46-D04EEBE6CC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E884D34-B52E-4B76-9B46-D04EEBE6CC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E884D34-B52E-4B76-9B46-D04EEBE6CC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E884D34-B52E-4B76-9B46-D04EEBE6CC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00F4D74-1414-4D2F-89FA-8E3728DABAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00F4D74-1414-4D2F-89FA-8E3728DABAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00F4D74-1414-4D2F-89FA-8E3728DABAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00F4D74-1414-4D2F-89FA-8E3728DABAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CF68ED7-BDAA-487A-9106-E9542BBC8E00}
+	EndGlobalSection
+EndGlobal
